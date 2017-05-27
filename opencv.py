@@ -16,18 +16,18 @@ args = vars(ap.parse_args())
 image = cv2.imread(args["image"])
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-# load the cat detector Haar cascade, then detect car faces
+# load the car detector Haar cascade, then detect car faces
 # in the input image
 detector = cv2.CascadeClassifier(args["cascade"])
 rects = detector.detectMultiScale(gray, scaleFactor=1.3,
                                   minNeighbors=10, minSize=(75, 75))
 
 # loop over the car faces and draw a rectangle surrounding each
-for (i, (x, y, w, h)) in enumerate(rects):
-    cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-    cv2.putText(image, "Car #{}".format(i + 1), (x, y - 10),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 0, 255), 2)
+for (x, y, w, h) in rects:
+    cv2.rectangle(image, (x, y), (x + w, y + h), (255, 0, 0), 2)
+    #break;
 
-# show the detected car faces
+# show the detected cars
 cv2.imshow("Cars", image)
 cv2.waitKey(0)
+cv2.destroyAllWindows()
