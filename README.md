@@ -1,5 +1,11 @@
 # opencv
-First Iteration of Classifier for detecting cars in images. 
+
+Train your own classifier using this guide:
+http://docs.opencv.org/2.4/doc/user_guide/ug_traincascade.html
+
+This classifier is used to detect cars in images and videos. 
+
+This is first Iteration of Classifier 
 
 Ran the classifier with LBP flag on opencv_traincascade 
 
