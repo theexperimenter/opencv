@@ -1,4 +1,4 @@
-# opencv
+# OpenCV
 
 Train your own classifier using this guide:
 http://docs.opencv.org/2.4/doc/user_guide/ug_traincascade.html
